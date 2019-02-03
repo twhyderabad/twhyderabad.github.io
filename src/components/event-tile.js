@@ -58,7 +58,7 @@ class EventTile extends HTMLElement {
                     line-height: 1.4em;
                 }
             </style>
-            <img src=./images/${this.image} />
+            <img src=./src/images/${this.image} />
             <h1>${this.name}</h1>
             <p>${this.description}</p>
         `;
