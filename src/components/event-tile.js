@@ -31,6 +31,14 @@ class EventTile extends HTMLElement {
         this.setAttribute('description', description);
     }
 
+    get url() {
+        return this.getAttribute('url');
+    }
+
+    set url(url) {
+        this.setAttribute('url', url);
+    }
+
     render() {
         this.innerHTML = `
             <style>
@@ -57,10 +65,17 @@ class EventTile extends HTMLElement {
                     color: #666;
                     line-height: 1.4em;
                 }
+
+                a, a:visited, a:link {
+                    color: inherit;
+                    text-decoration: none;
+                }
             </style>
-            <img src=./src/images/${this.image} />
-            <h1>${this.name}</h1>
-            <p>${this.description}</p>
+            <a href=${this.url}>
+                <img src=./src/images/${this.image} />
+                <h1>${this.name}</h1>
+                <p>${this.description}</p>
+            </a>
         `;
     }
 }

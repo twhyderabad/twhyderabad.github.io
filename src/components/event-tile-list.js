@@ -4,12 +4,13 @@ class EventTileList extends HTMLElement {
         this.render();
     }
 
-    renderEventTile({name, image, description}) {
+    renderEventTile({name, image, description, url}) {
         return `
             <event-tile
                 name="${name}"
                 image="${image}"
                 description="${description}"
+                url="${url}"
             ></event-tile>
         `;
     }
