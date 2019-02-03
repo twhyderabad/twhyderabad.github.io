@@ -1,7 +1,6 @@
 class EventTileList extends HTMLElement {
     constructor() {
         super();
-        this.root = this.attachShadow({ mode: 'open' });
         this.render();
     }
 
@@ -16,13 +15,13 @@ class EventTileList extends HTMLElement {
     }
 
     render() {
-        this.root.innerHTML = `
+        this.innerHTML = `
             <style>
-                :host {
+                event-tile-list {
                     display: flex;
                     flex-wrap: wrap;
                 }
-
+ 
                 event-tile {
                     width: 330px;
                     margin: 10px;

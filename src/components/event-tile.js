@@ -1,7 +1,6 @@
 class EventTile extends HTMLElement {
     constructor() {
         super();
-        this.root = this.attachShadow({ mode: 'open' });
     }
 
     connectedCallback() {
@@ -33,9 +32,9 @@ class EventTile extends HTMLElement {
     }
 
     render() {
-        this.root.innerHTML = `
+        this.innerHTML = `
             <style>
-                :host {
+                event-tile {
                     display: block;
                     box-shadow: 2px 2px 5px 2px #dcdada;
                     text-align: center;
